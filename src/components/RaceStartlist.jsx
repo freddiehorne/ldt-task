@@ -1,6 +1,8 @@
 import Name from "./Name";
 import TicketPrice from "./TicketPrice";
 import { nanoid } from "nanoid";
+import Titles from "./Titles";
+import styles from "../styles/RaceStartlist.module.scss";
 
 const RaceStartlist = (props) => {
 	return (
@@ -8,10 +10,9 @@ const RaceStartlist = (props) => {
 			{props.data.map((raceStartlist) => {
 				const { eventTitle, organiserTitle, ticketPrice } = raceStartlist;
 				return (
-					<li key={nanoid()}>
+					<li className={styles.listItem} key={nanoid()}>
 						<Name raceStartlist={raceStartlist} />
-						<p>{eventTitle}</p>
-						<p>{organiserTitle}</p>
+						<Titles eventTitle={eventTitle} organiserTitle={organiserTitle} />
 						<TicketPrice ticketPrice={ticketPrice.value} />
 					</li>
 				);

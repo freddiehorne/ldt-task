@@ -1,5 +1,7 @@
 import UserInput from "./UserInput";
+import TotalPrice from "./TotalPrice";
 import RaceStartlist from "./RaceStartlist";
+import styles from "../styles/Dashboard.module.scss";
 
 const Dashboard = (props) => {
 	const { data, onInput } = props;
@@ -11,9 +13,15 @@ const Dashboard = (props) => {
 	const ticketSaleTotal = ticketPrices.reduce((a, b) => a + b, 0);
 
 	return (
-		<div>
-			<UserInput data={data} onInput={onInput} />
-			<p>&#163; {ticketSaleTotal}</p>
+		<div className={styles.main}>
+			<h1 className={styles.heading1}>F Horne LDT Task</h1>
+			<h3 className={styles.heading3}>
+				Filter by either typing or using the dropdown menu
+			</h3>
+			<div className={styles.top}>
+				<UserInput data={data} onInput={onInput} />
+				<TotalPrice ticketSaleTotal={ticketSaleTotal} />
+			</div>
 			<RaceStartlist data={data} />
 		</div>
 	);

@@ -4,11 +4,19 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
 	const [userInput, setUserInput] = useState("");
-	// sets the state when input box is typed in
+	// sets the state when the user types in the input box
 	const onInput = (e) => {
 		setUserInput(e.target.value);
 	};
-	// filters the data when the user types in the input box according to either orgainiserTitle, eventTitle or lastName and userInput state
+
+	// const raceStartDates = [];
+	// data.forEach((item) => {
+	// 	raceStartDates.push(new Date(item.raceStartDate));
+	// });
+	// const sortedRaceDates = raceStartDates.sort((a, b) => a - b);
+	// console.log(sortedRaceDates);
+
+	// filters the data when the user types in the input box according to either orgainiserTitle, eventTitle or lastName and the userInput state
 	const filtered = data.filter(
 		(item) =>
 			item.organiserTitle.toLowerCase().includes(userInput.toLowerCase()) ||

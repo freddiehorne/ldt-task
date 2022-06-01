@@ -1,7 +1,7 @@
 const TicketPrice = (props) => {
 	return (
 		<p>
-			<strong>&#163; {props.ticketPrice}</strong>
+			<strong>&#163;{props.ticketPrice}</strong>
 		</p>
 	);
 };

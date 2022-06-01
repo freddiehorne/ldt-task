@@ -1,0 +1,13 @@
+.listItem {
+	height: 160px;
+	border: solid 1px black;
+	border-bottom: none;
+	padding-left: 2rem;
+	padding-bottom: 0.8rem;
+	&:nth-last-of-type(odd) {
+		background-color: rgb(224, 224, 224);
+	}
+	&:last-child {
+		border-bottom: solid 1px black;
+	}
+}

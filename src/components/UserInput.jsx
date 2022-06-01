@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import styles from "../styles/UserInput.module.scss";
 
 const UserInput = (props) => {
 	const { data, onInput } = props;
@@ -12,6 +13,7 @@ const UserInput = (props) => {
 	return (
 		<>
 			<input
+				className={styles.input}
 				placeholder="e.g Organiser, Event or Surname"
 				list="organisers"
 				onChange={onInput}
