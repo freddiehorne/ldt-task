@@ -1,7 +1,7 @@
 import styles from "../styles/Name.module.scss";
 
 const Name = (props) => {
-	const { lastName, firstName } = props.raceStartlist;
+	const { lastName, firstName } = props.name;
 	return (
 		<p className={styles.name}>
 			{`${lastName[0].toUpperCase() + lastName.slice(1)}, ${

@@ -12,12 +12,15 @@ const UserInput = (props) => {
 
 	return (
 		<>
-			<input
-				className={styles.input}
-				placeholder="e.g Organiser, Event or Surname"
-				list="organisers"
-				onChange={onInput}
-			/>
+			<label className={styles.label}>
+				Filter by either typing or using the dropdown menu
+				<input
+					className={styles.input}
+					placeholder="e.g Organiser, Event or Surname"
+					list="organisers"
+					onChange={onInput}
+				/>
+			</label>
 			<datalist id="organisers">
 				{organisers.map((item) => {
 					return <option value={item} key={nanoid()} />;

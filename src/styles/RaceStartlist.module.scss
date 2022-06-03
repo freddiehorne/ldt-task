@@ -2,12 +2,16 @@
 	height: 160px;
 	border: solid 1px black;
 	border-bottom: none;
-	padding-left: 2rem;
-	padding-bottom: 0.8rem;
+	padding: 0 2rem 0.8rem;
 	&:nth-last-of-type(odd) {
 		background-color: rgb(224, 224, 224);
 	}
 	&:last-child {
 		border-bottom: solid 1px black;
 	}
+}
+
+.flexContainer {
+	display: flex;
+	justify-content: space-between;
 }

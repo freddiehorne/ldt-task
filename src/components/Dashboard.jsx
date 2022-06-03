@@ -1,10 +1,11 @@
 import UserInput from "./UserInput";
+import Matches from "./Matches";
 import TotalPrice from "./TotalPrice";
 import RaceStartlist from "./RaceStartlist";
 import styles from "../styles/Dashboard.module.scss";
 
 const Dashboard = (props) => {
-	const { data, onInput } = props;
+	const { originalData, data, onInput, matched } = props;
 	// an array of all the ticket prices is created so that the contents can be summed with the reduce method and displayed on the page
 	const ticketPrices = [];
 	data.forEach((objTicketPrice) =>
@@ -14,13 +15,13 @@ const Dashboard = (props) => {
 
 	return (
 		<div className={styles.main}>
-			<h1 className={styles.heading1}>F Horne LDT Task</h1>
-			<h3 className={styles.heading3}>
-				Filter by either typing or using the dropdown menu
-			</h3>
+			<h1 className={styles.heading}>F Horne LDT Task</h1>
 			<div className={styles.top}>
 				<UserInput data={data} onInput={onInput} />
-				<TotalPrice ticketSaleTotal={ticketSaleTotal} />
+				<div className={styles.right}>
+					<Matches data={data} originalData={originalData} />
+					<TotalPrice ticketSaleTotal={ticketSaleTotal} />
+				</div>
 			</div>
 			<RaceStartlist data={data} />
 		</div>

@@ -1,7 +1,14 @@
 const TotalPrice = (props) => {
+	const totalPrice = props.ticketSaleTotal / 100;
 	return (
 		<p>
-			<strong>Total ticket sales: &#163;{props.ticketSaleTotal}</strong>
+			<strong>
+				{`Total sales:
+				${new Intl.NumberFormat("en-UK", {
+					style: "currency",
+					currency: "GBP",
+				}).format(totalPrice)}`}
+			</strong>
 		</p>
 	);
 };

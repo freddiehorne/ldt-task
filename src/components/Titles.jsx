@@ -4,8 +4,8 @@ const Titles = (props) => {
 	const { eventTitle, organiserTitle } = props;
 	return (
 		<>
-			<p>{eventTitle}</p>
 			<p className={styles.organiser}>{organiserTitle}</p>
+			<p>{eventTitle}</p>
 		</>
 	);
 };
