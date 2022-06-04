@@ -9,14 +9,20 @@ const RaceStartlist = (props) => {
 	return (
 		<ol>
 			{props.data.map((raceStartlist) => {
-				const { eventTitle, organiserTitle, ticketPrice, raceStartDate } =
-					raceStartlist;
+				const {
+					lastName,
+					firstName,
+					eventTitle,
+					organiserTitle,
+					raceStartDate,
+					ticketPrice,
+				} = raceStartlist;
 				return (
 					<li className={styles.listItem} key={nanoid()}>
 						<Name
 							name={{
-								lastName: raceStartlist.lastName,
-								firstName: raceStartlist.firstName,
+								lastName,
+								firstName,
 							}}
 						/>
 						<div className={styles.flexContainer}>

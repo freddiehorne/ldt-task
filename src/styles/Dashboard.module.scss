@@ -16,9 +16,11 @@
 }
 
 .right {
+	height: 70px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	p {
-		margin: 0 0 1rem 0;
+		margin: 0;
 	}
 }

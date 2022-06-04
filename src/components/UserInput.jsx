@@ -19,6 +19,7 @@ const UserInput = (props) => {
 					placeholder="e.g Organiser, Event or Surname"
 					list="organisers"
 					onChange={onInput}
+					type="search"
 				/>
 			</label>
 			<datalist id="organisers">

@@ -1,8 +1,11 @@
 const Matches = (props) => {
-	const { data, originalData } = props;
-	return (
-		<>{data.length < originalData.length && <p>{data.length} matches</p>}</>
-	);
+	const { data, confirmedData } = props;
+	const screenData =
+		data.length < confirmedData.length
+			? `${data.length} matches`
+			: `${confirmedData.length} entries`;
+
+	return <p>{screenData}</p>;
 };
 
 export default Matches;
