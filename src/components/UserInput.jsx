@@ -11,23 +11,21 @@ const UserInput = (props) => {
 	});
 
 	return (
-		<>
-			<label className={styles.label}>
-				Filter by either typing or using the dropdown menu
-				<input
-					className={styles.input}
-					placeholder="e.g Organiser, Event or Surname"
-					list="organisers"
-					onChange={onInput}
-					type="search"
-				/>
-			</label>
+		<label className={styles.label}>
+			Filter by typing or using the dropdown menu
+			<input
+				className={styles.input}
+				placeholder="e.g Organiser, Event or Surname"
+				type="search"
+				list="organisers"
+				onChange={onInput}
+			/>
 			<datalist id="organisers">
 				{organisers.map((item) => {
 					return <option value={item} key={nanoid()} />;
 				})}
 			</datalist>
-		</>
+		</label>
 	);
 };
 

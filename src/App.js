@@ -8,12 +8,9 @@ function App() {
 	const onInput = (e) => {
 		setUserInput(e.target.value);
 	};
-	// an array is created and only data with "CONFIRMED" status is passed into it
-	const confirmedData = [];
-	data.forEach((item) => {
-		if (item.status === "CONFIRMED") {
-			confirmedData.push(item);
-		}
+	// only data with "CONFIRMED" status is used
+	const confirmedData = data.filter((item) => {
+		return item.status === "CONFIRMED";
 	});
 	// data is sorted in order of race start date with the earliest showing first
 	confirmedData.sort(

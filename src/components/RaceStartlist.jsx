@@ -17,6 +17,7 @@ const RaceStartlist = (props) => {
 					raceStartDate,
 					ticketPrice,
 				} = raceStartlist;
+
 				return (
 					<li className={styles.listItem} key={nanoid()}>
 						<Name

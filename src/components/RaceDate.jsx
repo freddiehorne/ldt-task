@@ -1,7 +1,7 @@
 const RaceDate = (props) => {
-	const date = new Date(props.raceStartDate);
+	const date = new Date(props.raceStartDate).toLocaleDateString();
 
-	return <p>{date.toLocaleDateString()}</p>;
+	return <p>{date}</p>;
 };
 
 export default RaceDate;
